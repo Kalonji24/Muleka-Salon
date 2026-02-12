@@ -40,8 +40,25 @@
             font-size: 2rem;
             font-style: italic;
             font-weight: 600;
-            color: var(--primary);
+            color: black;
+              display: flex;
+            align-items: center;
+            gap: 10px; /* Space between icon and text */
         }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Makes it a perfect circle */
+            object-fit: cover; /* Ensures image fits nicely in circle */
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+        } 
 
         .nav-links {
             display: flex;
@@ -66,7 +83,7 @@
             background: var(--dark);
             color: white;
             padding: 0.8rem 2rem;
-            border: none;
+            border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
             font-size: 1rem;
@@ -200,7 +217,7 @@
             font-weight: 300;
             letter-spacing: 3px;
             margin-bottom: 2rem;
-            color: var(--primary);
+            color: #282f2d;
         }
 
         .hero-tagline {
@@ -224,21 +241,21 @@
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s;
-            border: none;
+            border-radius: 25px;
             letter-spacing: 1px;
             text-decoration: none;
             display: inline-block;
         }
 
         .btn-primary {
-            background: var(--dark);
-            color: white;
+            background: transparent;
+            color: var(--dark);
+            border: 2px solid var(--dark);
         }
 
         .btn-primary:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(44, 95, 79, 0.3);
+            background: var(--dark);
+            color: white;
         }
 
         .btn-secondary {
@@ -341,7 +358,7 @@
         .service-book-btn {
             background: var(--dark);
             color: white;
-            border: none;
+            border-radius: 25px;
             padding: 0.8rem 1.5rem;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
@@ -558,6 +575,7 @@
             margin: 3% auto;
             padding: 3rem;
             max-width: 600px;
+            height: 870px;
             border-radius: 2px;
             position: relative;
             animation: slideDown 0.3s;
@@ -643,23 +661,45 @@
             border-color: var(--primary);
         }
 
-        .submit-booking {
+        .booking-WhatsApp {
             padding: 1.2rem;
             background: var(--dark);
             color: white;
-            border: none;
+            border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
-            font-size: 1.1rem;
+            /* font-size: 1.1rem; */
             letter-spacing: 1px;
             transition: all 0.3s;
             bottom: 38px;
+            /*right: 12px;*/
             position: absolute;
         }
 
-        .submit-booking:hover {
+        .booking-WhatsApp:hover {
             background: var(--primary);
         }
+
+        .booking-Gmail {
+            padding: 1.2rem;
+            background: var(--dark);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Jost', sans-serif;
+            /* font-size: 1.1rem; */
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            bottom: 38px;
+            right: 12px;
+            position: absolute;
+        }
+
+        .booking-Gmail:hover {
+            background: var(--primary);
+        }
+
+
 
         /* Animations */
         @keyframes fadeInUp {
@@ -765,6 +805,7 @@
             .btn-secondary {
                 width: 100%;
                 text-align: center;
+                border-radius: 25px;
             }
 
             .hero-image {
@@ -907,8 +948,9 @@
 
     /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, #e8c4a0 0%, #1a3d32 100%);
-    color: #fff;
+    /* background: linear-gradient(135deg, #e8c4a0 0%, #1a3d32 100%); */
+    background: linear-gradient(135deg, var(--light) 0%, var(--pink) 100%);
+    color: #0f0f0f;
     padding: 60px 20px 30px;
     text-align: center;
 }
@@ -923,13 +965,13 @@
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #D4A574;
+    color: #0c0c0c;
 }
 
 .footer-tagline {
     font-family: 'Jost', sans-serif;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(26, 25, 25, 0.8);
     margin-bottom: 30px;
 }
 
@@ -946,19 +988,19 @@
     height: 50px;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #D4A574;
+    border: 2px solid #494745;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #D4A574;
+    color: #131212;
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
 }
 
 .footer-icon:hover {
-    background: #D4A574;
-    color: #2C5F4F;
+    background: #817f7d;
+    color: #696b6a;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
 }
@@ -970,19 +1012,19 @@
 .footer-info p {
     font-family: 'Jost', sans-serif;
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(37, 36, 36, 0.7);
     margin: 8px 0;
 }
 
 .footer-bottom {
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(77, 73, 73, 0.1);
 }
 
 .footer-bottom p {
     font-family: 'Jost', sans-serif;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(27, 26, 26, 0.5);
     margin: 0;
 }
 
