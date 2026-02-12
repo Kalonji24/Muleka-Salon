@@ -390,11 +390,13 @@
             overflow: hidden;
             aspect-ratio: 3/4;
             cursor: pointer;
+            flex: 0 0 400px;
+            min-width: 400px;
         }
 
         .look-item img {
             width: 100%;
-            height: 100%;
+            height: 533px;
             object-fit: cover;
             transition: transform 0.5s;
         }
@@ -469,7 +471,7 @@
 
         .gallery-item img {
             width: 100%;
-            height: 100%;
+            height: 450px;
             object-fit: cover;
             transition: transform 0.5s;
         }
@@ -490,88 +492,6 @@
             padding: 5px 10px;
             border-radius: 5px;
         }
-
-                /* Contact Section
-        .contact {
-            padding: 6rem 5%;
-            background: var(--dark);
-            color: white;
-            text-align: center;
-        }
-
-        .contact .section-title {
-            color: white;
-            margin-bottom: 3rem;
-        }
-
-        .contact-details {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto 4rem;
-        }
-
-        .contact-item h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-style: italic;
-            color: var(--secondary);
-        }
-
-        .contact-item p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: var(--secondary);
-        }
-
-        .contact-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .contact-btn {
-            padding: 1rem 2.5rem;
-            background: var(--secondary);
-            color: var(--dark);
-            text-decoration: none;
-            font-family: 'Jost', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s;
-            letter-spacing: 1px;
-            border: 2px solid var(--secondary);
-        }
-
-        .contact-btn:hover {
-            background: transparent;
-            color: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        .whatsapp-btn {
-            background: #25D366;
-            border-color: #25D366;
-            color: white;
-        }
-
-        .whatsapp-btn:hover {
-            background: transparent;
-            color: #25D366;
-        } */
 
         /* Booking Modal */
         .modal {
@@ -1368,27 +1288,6 @@ body {
     padding: 0 60px;
     right: 64px;
 
-        /* SM - Small (Large phones, small tablets) */
-         @media (min-width: 576px) and (max-width: 767.98px) {
-
-
-        }
-
-        /* MD - Medium (Tablets) */
-         @media (min-width: 768px) and (max-width: 991.98px) {
-
-        }
-
-        /* LG - Large (Desktops) */
-         @media (min-width: 992px) and (max-width: 1199.98px) {
-
-        }
-
-        /* XL - Extra Large (Large desktops) */
-         @media (min-width: 1200px) {
-
-        }
-
 }
 
 /* Update looks-grid for horizontal scroll */
@@ -1623,6 +1522,569 @@ body {
     }
 }
 
+/* ==========================================
+   RESPONSIVE DESIGN - ALL SCREEN SIZES
+   ========================================== */
 
+/* XS - Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Navigation */
+    nav {
+        padding: 15px 20px;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 100px 20px 40px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-tagline {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        padding: 15px 30px;
+    }
+    
+    .hero-image {
+        height: 400px;
+        margin-top: 30px;
+    }
+    
+    /* Services Section */
+    .services {
+        padding: 50px 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .service-item {
+        padding: 25px 20px;
+        border-right: none;
+    }
+    
+    .service-name {
+        font-size: 1.5rem;
+    }
+    
+    .service-price {
+        font-size: 1.1rem;
+    }
+    
+    .service-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Quote Section */
+    .quote-section {
+        padding: 50px 20px;
+    }
+    
+    .quote-text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+    
+    /* Signature Looks */
+    .signature-looks {
+        padding: 50px 20px;
+    }
+    
+    .looks-carousel-container {
+        width: 100%;
+        right: 0;
+        padding: 0 50px;
+    }
+    
+    .looks-grid {
+        gap: 15px;
+    }
+    
+    .look-item {
+        flex: 0 0 260px;
+        min-width: 260px;
+    }
+    
+    .look-item img {
+        height: 350px;
+    }
+    
+    .look-title {
+        font-size: 1.2rem;
+    }
+    
+    .look-description {
+        font-size: 0.85rem;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .looks-carousel-container .left-arrow {
+        left: 5px;
+    }
+    
+    .looks-carousel-container .right-arrow {
+        right: 5px;
+    }
+    
+    /* Gallery Section */
+    .gallery {
+        padding: 50px 20px;
+    }
+    
+    .gallery-carousel-container {
+        width: 100%;
+        right: 0;
+        padding: 0 50px;
+    }
+    
+    .gallery-grid {
+        gap: 15px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 260px;
+        min-width: 260px;
+    }
+    
+    .gallery-item img {
+        height: 260px;
+    }
+    
+    .gallery-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .gallery-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .gallery-carousel-container .left-arrow {
+        left: 5px;
+    }
+    
+    .gallery-carousel-container .right-arrow {
+        right: 5px;
+    }
+    
+    /* Booking Modal */
+    .modal-content {
+        width: 95%;
+        max-width: 95%;
+        margin: 5% auto;
+        padding: 25px 15px;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .modal h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .close-modal {
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .time-slot {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .booking-WhatsApp,
+    .booking-Gmail {
+        position: relative;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        margin-top: 10px;
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 20px 25px;
+    }
+    
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+    
+    .footer-tagline {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .footer-social {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .footer-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .footer-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer-info p {
+        font-size: 0.85rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.75rem;
+    }
+    
+    /* Scroll to Top */
+    .scroll-top-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .scroll-top-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* SM - Small Devices (landscape phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 120px 40px 60px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-tagline {
+        font-size: 20px;
+    }
+    
+    .hero-image {
+        height: 500px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .looks-carousel-container {
+        width: 100%;
+        right: 0;
+        padding: 0 55px;
+    }
+    
+    .look-item {
+        flex: 0 0 300px;
+        min-width: 300px;
+    }
+    
+    .gallery-carousel-container {
+        width: 100%;
+        right: 0;
+        padding: 0 55px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 300px;
+        min-width: 300px;
+    }
+    
+    .gallery-item img {
+        height: 300px;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .modal-content {
+        width: 90%;
+        padding: 2.5rem 2rem;
+    }
+}
+
+/* MD - Medium Devices (tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 100px 40px;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-tagline {
+        font-size: 24px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        height: 550px;
+        margin-top: 40px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .looks-carousel-container {
+        width: 100%;
+        right: 0;
+        padding: 0 60px;
+    }
+    
+    .look-item {
+        flex: 0 0 320px;
+        min-width: 320px;
+    }
+    
+    .gallery-carousel-container {
+        width: 100%;
+        right: 0;
+        padding: 0 60px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 330px;
+        min-width: 330px;
+    }
+    
+    .gallery-item img {
+        height: 330px;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .modal-content {
+        width: 85%;
+        max-width: 600px;
+    }
+    
+    .booking-WhatsApp,
+    .booking-Gmail {
+        width: 48%;
+    }
+    
+    .booking-WhatsApp {
+        right: auto;
+        left: 12px;
+    }
+}
+
+/* LG - Large Devices (desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        padding: 100px 40px;
+    }
+    
+    .hero-content {
+        text-align: left;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-tagline {
+        font-size: 26px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .looks-carousel-container {
+        width: 100%;
+        max-width: 1400px;
+        right: 0;
+        padding: 0 60px;
+    }
+    
+    .look-item {
+        flex: 0 0 300px;
+        min-width: 300px;
+    }
+    
+    .gallery-carousel-container {
+        width: 100%;
+        max-width: 1400px;
+        right: 0;
+        padding: 0 60px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 340px;
+        min-width: 340px;
+    }
+    
+    .gallery-item img {
+        height: 340px;
+    }
+}
+
+/* XL - Extra Large Devices (large desktops, 1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .looks-carousel-container {
+        width: 100%;
+        max-width: 1600px;
+        right: 0;
+        padding: 0 60px;
+    }
+    
+    .gallery-carousel-container {
+        width: 100%;
+        max-width: 1600px;
+        right: 0;
+        padding: 0 60px;
+    }
+}
+
+/* XXL - Extra Extra Large Devices (very large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .looks-carousel-container {
+        max-width: 1800px;
+        right: 0;
+    }
+    
+    .gallery-carousel-container {
+        max-width: 1800px;
+        right: 0;
+    }
+}
+
+/* Landscape Orientation Fix for Mobile */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 80px 20px 40px;
+    }
+    
+    .hero-image {
+        height: 300px;
+    }
+    
+    .modal-content {
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+}
+
+/* High Resolution Screens */
+@media (min-width: 1920px) {
+    .looks-carousel-container {
+        max-width: 1900px;
+    }
+    
+    .gallery-carousel-container {
+        max-width: 1900px;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .section-title {
+        font-size: 4rem;
+    }
+}
 
 
