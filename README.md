@@ -2,7 +2,7 @@
 
 A modern, responsive website for Muleka Salon - Bellville's premier hair studio specializing in hair styling, coloring, treatments, and more.
 
-## 🌟 Features
+## Features
 
 - **Responsive Design** - Works perfectly on all devices (mobile, tablet, desktop)
 - **Interactive Booking System** - Book appointments via WhatsApp or Email
@@ -11,7 +11,7 @@ A modern, responsive website for Muleka Salon - Bellville's premier hair studio 
 - **Smooth Animations** - Elegant hover effects and transitions
 - **Contact Integration** - Direct WhatsApp, phone, and email links
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -19,7 +19,7 @@ A modern, responsive website for Muleka Salon - Bellville's premier hair studio 
 - Google Fonts (Playfair Display, Jost)
 - SVG Icons
 
-## 📋 Services Offered
+## Services Offered
 
 - Hair Styling (from R250)
 - Color Treatments (from R450)
@@ -30,7 +30,7 @@ A modern, responsive website for Muleka Salon - Bellville's premier hair studio 
 - Keratin Treatment (from R650)
 - Bridal Hair (from R1200)
 
-## 📱 Key Sections
+## Key Sections
 
 1. **Hero Section** - Eye-catching introduction with booking CTA
 2. **Services Grid** - Detailed list of all salon services with prices
@@ -39,7 +39,7 @@ A modern, responsive website for Muleka Salon - Bellville's premier hair studio 
 5. **Footer** - Contact information and social media links
 6. **Booking Modal** - Easy appointment scheduling
 
-## 🚀 How to Use
+## How to Use
 
 1. Clone the repository
 ```bash
@@ -54,14 +54,14 @@ git clone https://github.com/yourusername/muleka-salon.git
    - Adjust prices and services as needed
    - Update color scheme in `styles.css`
 
-## 📞 Contact Information
+## Contact Information
 
 - **Phone**: +27 78 765 9444
 - **Email**: kalonjilubo12@gmail.com
 - **Location**: South Street, Bellville Junction, Cape Town, 7530
 - **Hours**: Monday - Sunday, 08:00 AM - 07:00 PM
 
-## 🎨 Design Features
+## Design Features
 
 - **Color Palette**: 
   - Primary: #D4A574 (Gold)
@@ -72,7 +72,7 @@ git clone https://github.com/yourusername/muleka-salon.git
   - Body: Jost (sans-serif)
 - **Layout**: Modern grid-based responsive design
 
-## 📂 File Structure
+## File Structure
 ```
 muleka-salon/
 ├── index.html          # Main HTML file
@@ -84,7 +84,7 @@ muleka-salon/
 └── README.md          # This file
 ```
 
-## ✨ Features Breakdown
+## Features Breakdown
 
 ### Carousel Navigation
 - Left/Right arrow buttons for smooth horizontal scrolling
@@ -102,7 +102,7 @@ muleka-salon/
 - Touch-optimized buttons and navigation
 - Mobile-friendly modal forms
 
-## 🔧 Customization
+## Customization
 
 To customize for your own salon:
 
@@ -112,11 +112,11 @@ To customize for your own salon:
 4. **Update Services**: Edit service names, descriptions, and prices
 5. **Modify Hours**: Update business hours in footer section
 
-## 📄 License
+## License
 
 This project is open source and available for personal and commercial use.
 
-## 👨‍💻 Developer
+## Developer
 
 Created for Muleka Salon - Bellville's finest hair studio
 
