@@ -25,7 +25,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(248, 246, 243, 0.95);
+            background: linear-gradient(135deg, #e8c4a0 0%, var(--pink) 100%); 
             backdrop-filter: blur(10px);
             padding: 1.5rem 5%;
             display: flex;
@@ -80,8 +80,8 @@
         }
 
         .book-btn {
-            background: var(--dark);
-            color: white;
+            background: transparent;
+            color: var(--dark);
             padding: 0.8rem 2rem;
             border-radius: 25px;
             cursor: pointer;
@@ -92,8 +92,8 @@
         }
 
         .book-btn:hover {
-            background: var(--primary);
-            transform: translateY(-2px);
+            background: var(--dark);
+            color: white;
         }
 
         /* Burger Menu */
@@ -143,7 +143,7 @@
         .mobile-menu.active {
             transform: translateY(0);
             top:66px;
-            margin-left: 218px;
+            /* margin-left: 218px; */
         }
 
         .mobile-menu ul {
@@ -356,8 +356,8 @@
         }
 
         .service-book-btn {
-            background: var(--dark);
-            color: white;
+            background: transparent;
+            color: var(--dark);
             border-radius: 25px;
             padding: 0.8rem 1.5rem;
             cursor: pointer;
@@ -368,7 +368,9 @@
         }
 
         .service-book-btn:hover {
-            background: var(--primary);
+            background: var(--dark);
+            color: white;
+
         }
 
         /* Signature Looks Section */
@@ -432,7 +434,7 @@
         /* Quote Section */
         .quote-section {
             padding: 8rem 5%;
-            background: var(--pink);
+            background: linear-gradient(135deg, #e8c4a0 0%, var(--pink) 100%); 
             text-align: center;
         }
 
@@ -462,6 +464,7 @@
             aspect-ratio: 1;
             overflow: hidden;
             cursor: pointer;
+
         }
 
         .gallery-item img {
@@ -474,8 +477,21 @@
         .gallery-item:hover img {
             transform: scale(1.1);
         }
+       
 
-        /* Contact Section */
+        .style-name {
+            position: absolute;
+            bottom: 331px;
+            left: 61px;          /* Move text left/right */
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            /*background: rgba(255, 255, 255, 0.6);  optional light background */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+                /* Contact Section
         .contact {
             padding: 6rem 5%;
             background: var(--dark);
@@ -555,7 +571,7 @@
         .whatsapp-btn:hover {
             background: transparent;
             color: #25D366;
-        }
+        } */
 
         /* Booking Modal */
         .modal {
@@ -663,8 +679,8 @@
 
         .booking-WhatsApp {
             padding: 1.2rem;
-            background: var(--dark);
-            color: white;
+            background: transparent;
+            color: var(--dark);
             border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
@@ -677,13 +693,14 @@
         }
 
         .booking-WhatsApp:hover {
-            background: var(--primary);
+            background: var(--dark); 
+            color: white;
         }
 
         .booking-Gmail {
             padding: 1.2rem;
-            background: var(--dark);
-            color: white;
+            background: transparent; 
+            color: var(--dark);
             border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
@@ -696,7 +713,8 @@
         }
 
         .booking-Gmail:hover {
-            background: var(--primary);
+            background: var(--dark);
+            color: white;
         }
 
 
@@ -948,8 +966,8 @@
 
     /* Footer Styles */
 .footer {
-    /* background: linear-gradient(135deg, #e8c4a0 0%, #1a3d32 100%); */
-    background: linear-gradient(135deg, var(--light) 0%, var(--pink) 100%);
+    background: linear-gradient(135deg, #e8c4a0 0%, var(--pink) 100%); 
+    /* background: linear-gradient(135deg, var(--light) 0%, var(--pink) 100%); */
     color: #0f0f0f;
     padding: 60px 20px 30px;
     text-align: center;
@@ -1266,5 +1284,329 @@ img {
 body {
     overflow-x: hidden;
 }
+
+
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #D4A574;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    background: #E8C4A0;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(44, 95, 79, 0.4);
+}
+
+.scroll-top-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile responsive */
+@media (max-width: 767.98px) {
+    .scroll-top-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .scroll-top-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+/* Carousel Container */
+.looks-carousel-container {
+    position: relative;
+    width: 1863px;
+    margin: 0 auto;
+    padding: 0 60px;
+    right: 64px;
+
+        /* SM - Small (Large phones, small tablets) */
+         @media (min-width: 576px) and (max-width: 767.98px) {
+
+
+        }
+
+        /* MD - Medium (Tablets) */
+         @media (min-width: 768px) and (max-width: 991.98px) {
+
+        }
+
+        /* LG - Large (Desktops) */
+         @media (min-width: 992px) and (max-width: 1199.98px) {
+
+        }
+
+        /* XL - Extra Large (Large desktops) */
+         @media (min-width: 1200px) {
+
+        }
+
+}
+
+/* Update looks-grid for horizontal scroll */
+.looks-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.looks-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.look-item {
+    flex: 0 0 300px;
+    min-width: 300px;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(212, 165, 116, 0.9);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-arrow:hover {
+    background: #D4A574;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767.98px) {
+    .looks-carousel-container {
+        padding: 0 50px;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .left-arrow {
+        left: 5px;
+    }
+    
+    .right-arrow {
+        right: 5px;
+    }
+    
+    .look-item {
+        flex: 0 0 250px;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .looks-carousel-container {
+        padding: 0 45px;
+    }
+    
+    .look-item {
+        flex: 0 0 220px;
+        min-width: 220px;
+    }
+}
+
+
+
+
+/* Gallery Carousel Container */
+.gallery-carousel-container {
+    position: relative;
+    width: 1863px;
+    margin: 0 auto;
+    padding: 0 60px;
+    right: 64px;
+}
+
+/* Update gallery-grid for horizontal scroll */
+.gallery-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.gallery-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.gallery-item {
+    flex: 0 0 350px;
+    min-width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Gallery Arrows */
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(212, 165, 116, 0.9);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px #F4E4E1;
+}
+
+.gallery-arrow:hover {
+    background: #D4A574;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+
+.gallery-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.gallery-arrow.left-arrow {
+    left: 0;
+}
+
+.gallery-arrow.right-arrow {
+    right: 0;
+}
+
+/* Mobile Responsive for Gallery */
+@media (max-width: 767.98px) {
+    .gallery-carousel-container {
+        padding: 0 50px;
+    }
+    
+    .gallery-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .gallery-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .gallery-arrow.left-arrow {
+        left: 5px;
+    }
+    
+    .gallery-arrow.right-arrow {
+        right: 5px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 280px;
+        min-width: 280px;
+    }
+    
+    .gallery-item img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .gallery-carousel-container {
+        padding: 0 45px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 250px;
+        min-width: 250px;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+
 
 

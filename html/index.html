@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muleka Salon - BELLVILLE's Premier Hair Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="/assets/images/icon_hair Salon.jpg" alt="Muleka Salon Logo" class="logo-icon">
+           <span class="logo-text">Muleka Salon</span>
+           </div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <button class="book-btn" onclick="openBookingModal()">Book Now</button>
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+            <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <button class="book-btn" onclick="openBookingModal(); closeMobileMenu();">Book Now</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">BELLVILLE'S FINEST</div>
+            <h1 class="hero-title">Muleka Salon</h1>
+            <p class="hero-tagline">BEAUTIFUL HAIR. SKILLED STYLISTS. CONFIDENCE THAT SHINES.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openBookingModal()">Book My Session</button>
+                <a href="#services" class="btn-secondary">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/images/Hair salon place_1.avif" alt="Muleka Salon">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Look good, feel amazing. We style hair for women and kids.</p>
+        
+        <div class="services-grid">
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Hair Styling</h3>
+                        <div class="service-price">From R250</div>
+                    </div>
+                    <p class="service-description">Expert cuts, blowouts, and styling tailored to enhance your natural beauty and personal style.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Hair Styling', 250)">Book Now</button>
+            </div>
+
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Color</h3>
+                        <div class="service-price">From R450</div>
+                    </div>
+                    <p class="service-description">High-shine, low-tox color treatments with ChromaGlaze technology for vibrant, healthy hair.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Color', 450)">Book Now</button>
+            </div>
+
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Highlights</h3>
+                        <div class="service-price">From R550</div>
+                    </div>
+                    <p class="service-description">LightWeave highlighting technique for weightless, natural-looking dimension and face framing.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Highlights', 550)">Book Now</button>
+            </div>
+
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Treatments</h3>
+                        <div class="service-price">From R350</div>
+                    </div>
+                    <p class="service-description">Intensive repair and nourishment treatments to restore hair health and brilliance.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Treatments', 350)">Book Now</button>
+            </div>
+
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Braiding</h3>
+                        <div class="service-price">From R400</div>
+                    </div>
+                    <p class="service-description">Intricate braiding styles from classic to contemporary, created with precision and care.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Braiding', 400)">Book Now</button>
+            </div>
+
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Extensions</h3>
+                        <div class="service-price">From R800</div>
+                    </div>
+                    <p class="service-description">Premium hair extensions for length, volume, and versatility with seamless integration.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Extensions', 800)">Book Now</button>
+            </div>
+
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Keratin Treatment</h3>
+                        <div class="service-price">From R650</div>
+                    </div>
+                    <p class="service-description">Smoothing keratin treatment to eliminate frizz and create sleek, manageable hair.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Keratin Treatment', 650)">Book Now</button>
+            </div>
+
+            <div class="service-item">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">Bridal Hair</h3>
+                        <div class="service-price">From R1200</div>
+                    </div>
+                    <p class="service-description">Bespoke bridal styling for your special day, including consultation and trial session.</p>
+                </div>
+                <button class="service-book-btn" onclick="openBookingModal('Bridal Hair', 1200)">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="quote-text">
+            HAIR IS YOUR LOUDEST ACCESSORY. LET'S MAKE SURE IT SPEAKS FLUENT BRILLIANCE. STEP INTO THE CHAIR AND WATCH ORDINARY VANISH.
+        </div>
+    </section>
+
+    <!-- Signature Looks Section -->
+    <section class="signature-looks">
+        <h2 class="section-title">Our Signature Looks</h2>
+        <p class="section-subtitle">Discover our signature looks that define elegance and style.</p>
+        
+        <div class="looks-carousel-container">
+
+                <!-- Left Arrow -->
+                <button class="carousel-arrow left-arrow" onclick="scrollLooks('left')" aria-label="Scroll left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Looks Grid -->
+        <div class="looks-grid" id="looksGrid">
+
+
+            <div class="look-item">
+                <img src="/assets/images/Blow-Dried-Half-And-Half-Hairstyle.jpg " alt="Blow-Dried Half & Half Hairstyle">
+                <div class="look-overlay">
+                    <h3 class="look-title">Blow-Dried Half & Half Hairstyle</h3>
+                    <p class="look-description">A classic and timeless look that frames the face beautifully.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Box-Braids-Hairstyle.jpg" alt="Box Braids Hairstyle">
+                <div class="look-overlay">
+                    <h3 class="look-title">Box Braids Hairstyle</h3>
+                    <p class="look-description">A versatile and protective style that is both elegant and practical.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Braided-Afro-Bun.jpg" alt="Braided Afro Bun">
+                <div class="look-overlay">
+                    <h3 class="look-title">Braided Afro Bun</h3>
+                    <p class="look-description">A stylish and elegant updo that showcases natural texture.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Braids-Beads-Hairstyle.jpg" alt="Braids Beads Hairstyle">
+                <div class="look-overlay">
+                    <h3 class="look-title">Braids Beads Hairstyle</h3>
+                    <p class="look-description">A trendy and eye-catching style that adds flair to any look.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Cornrow-Style-With-Large-Braids.jpg" alt="Cornrow Style With Large Braids">
+                <div class="look-overlay">
+                    <h3 class="look-title">Cornrow Style With Large Braids</h3>
+                    <p class="look-description">A bold and textured look that combines traditional cornrows with large braids.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Cornrows-Crochet-Hairstyle.jpg" alt="Cornrows Crochet Hairstyle">
+                <div class="look-overlay">
+                    <h3 class="look-title">Cornrows Crochet Hairstyle</h3>
+                    <p class="look-description">A protective and stylish look that combines traditional cornrows with crochet techniques.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Cornrows-Hair-Bubbles-Style.jpg" alt="Cornrows Hair Bubbles Style">
+                <div class="look-overlay">
+                    <h3 class="look-title">Cornrows Hair Bubbles Style</h3>
+                    <p class="look-description">A playful and trendy look that adds volume and texture to the hair.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Cornrows-With-Tapered-Cut.jpg" alt="Cornrows With Tapered Cut">
+                <div class="look-overlay">
+                    <h3 class="look-title">Cornrows With Tapered Cut</h3>
+                    <p class="look-description">A modern twist on traditional cornrows, featuring a tapered cut for a sleek and polished look.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                    <img src="/assets/images/Distressed-Faux-Locs-Style.jpg" alt="Distressed Faux Locs Style">
+                    <div class="look-overlay">
+                        <h3 class="look-title">Distressed Faux Locs Style</h3>
+                        <p class="look-description">A trendy and textured look that gives the appearance of faux locs with a distressed finish.</p>
+                    </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Flat-Twist-Updo.jpg" alt="Flat Twist Updo">
+                <div class="look-overlay">
+                    <h3 class="look-title">Flat Twist Updo</h3>
+                    <p class="look-description">A sleek and elegant updo that combines flat twists for a polished and sophisticated look.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Flat-Twist-With-Feed-In-Middle-Bun.jpg" alt="Flat Twist With Feed In Middle Bun">
+                <div class="look-overlay">
+                    <h3 class="look-title">Flat Twist With Feed In Middle Bun</h3>
+                    <p class="look-description">A stylish and versatile look that combines flat twists with a feed-in middle bun for a polished and modern appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Fluffy-Afro-Hairstyle.webp" alt="Fluffy Afro Hairstyle">
+                <div class="look-overlay">
+                    <h3 class="look-title">Fluffy Afro Hairstyle</h3>
+                    <p class="look-description">A voluminous and playful look that emphasizes natural texture and fullness.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Freestyle-Cornrows.jpg" alt="Freestyle Cornrows">
+                <div class="look-overlay">
+                    <h3 class="look-title">Freestyle Cornrows</h3>
+                    <p class="look-description">A creative and artistic variation of cornrows that allows for more freedom in styling and design.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Freestyle-Half-And-Half.jpg" alt="Freestyle Half And Half">
+                <div class="look-overlay">
+                    <h3 class="look-title">Freestyle Half And Half</h3>
+                    <p class="look-description">A unique and stylish look that combines two different hair textures or styles in one cohesive design.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Freestyle-Stitch-Bun-Curls.jpg" alt="Freestyle Stitch Bun Curls">
+                <div class="look-overlay">
+                    <h3 class="look-title">Freestyle Stitch Bun Curls</h3>
+                    <p class="look-description">A trendy and elegant look that combines a stitch bun with soft curls for a polished and modern appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/High-Bun-With-Accessories.jpg" alt="High Bun With Accessories">
+                <div class="look-overlay">
+                    <h3 class="look-title">High Bun With Accessories</h3>
+                    <p class="look-description">A polished and elegant look that combines a high bun with decorative accessories for a sophisticated appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Inverted-Cornrows.jpg" alt="Inverted Cornrows">
+                <div class="look-overlay">
+                    <h3 class="look-title">Inverted Cornrows</h3>
+                    <p class="look-description">A unique and stylish variation of cornrows that creates an inverted or reversed look for a modern appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Large-Clean-Bantu-Knots.jpg" alt="Large Clean Bantu Knots">
+                <div class="look-overlay">
+                    <h3 class="look-title">Large Clean Bantu Knots</h3>
+                    <p class="look-description">A classic and neat look that features large, well-defined bantu knots for a polished and structured appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Large-Textured-Hair-Strands.jpg" alt="Large Textured Hair Strands">
+                <div class="look-overlay">
+                    <h3 class="look-title">Large Textured Hair Strands</h3>
+                    <p class="look-description">A bold and textured look that features large, well-defined hair strands for a dramatic and modern appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Long-Hair-Braided-Pony-Style.webp" alt="Long Hair Braided Pony Style">
+                <div class="look-overlay">
+                    <h3 class="look-title">Long Hair Braided Pony Style</h3>
+                    <p class="look-description">A classic and elegant look that features a long, braided ponytail for a polished and sophisticated appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Long-Knotless-Hairstyle.jpg" alt="Long Knotless Hairstyle">
+                <div class="look-overlay">
+                    <h3 class="look-title">Long Knotless Hairstyle</h3>
+                    <p class="look-description">A sleek and elegant look that features long, knotless hair for a smooth and polished appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Medium-Fulani-Knotless-Braids.jpg" alt="Medium Fulani Knotless Braids">
+                <div class="look-overlay">
+                    <h3 class="look-title">Medium Fulani Knotless Braids</h3>
+                    <p class="look-description">A stylish and versatile look that features medium-length fulani knots for a polished and modern appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Natural-Long-Curls.jpg" alt="Natural Long Curls">
+                <div class="look-overlay">
+                    <h3 class="look-title">Natural Long Curls</h3>
+                    <p class="look-description">A natural and effortless look that features long, well-defined curls for a relaxed and stylish appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Rubber-Band-Style.jpg" alt="Rubber Band Style">
+                <div class="look-overlay">
+                    <h3 class="look-title">Rubber Band Style</h3>
+                    <p class="look-description">A trendy and playful look that features rubber band styling for a fun and modern appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Salt-Pepper-Bantu-Knots.jpg" alt="Salt Pepper Bantu Knots">
+                <div class="look-overlay">
+                    <h3 class="look-title">Salt Pepper Bantu Knots</h3>
+                    <p class="look-description">A stylish and modern look that features salt and pepper bantu knots for a trendy and polished appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Sassy-Crochet-With-Boho-Twist-Curls.jpg" alt="Sassy Crochet With Boho Twist Curls">
+                <div class="look-overlay">
+                    <h3 class="look-title">Sassy Crochet With Boho Twist Curls</h3>
+                    <p class="look-description">A trendy and stylish look that features sassy crochet with boho twist curls for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Short-Cornrows-With-Curly-Baby-Hairs.jpg" alt="Short Cornrows With Curly Baby Hairs">
+                <div class="look-overlay">
+                    <h3 class="look-title">Short Cornrows With Curly Baby Hairs</h3>
+                    <p class="look-description">A trendy and stylish look that features short cornrows with curly baby hairs for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Simple-Cute-Feedin-Braids.jpg" alt="Simple Cute Feedin Braids">
+                <div class="look-overlay">
+                    <h3 class="look-title">Simple Cute Feedin Braids</h3>
+                    <p class="look-description">A simple and cute look that features feedin braids for a classic and polished appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Small-Senegalese-Twists.jpg" alt="Small Senegalese Twists">
+                <div class="look-overlay">
+                    <h3 class="look-title">Small Senegalese Twists</h3>
+                    <p class="look-description">A trendy and stylish look that features small senegalese twists for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Stitch-Braids-Style.jpg" alt="Stitch Braids Style">
+                <div class="look-overlay">
+                    <h3 class="look-title">Stitch Braids Style</h3>
+                    <p class="look-description">A trendy and stylish look that features stitch braids for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Styled-Zigzag-Braids.jpg" alt="Styled Zigzag Braids">
+                <div class="look-overlay">
+                    <h3 class="look-title">Styled Zigzag Braids</h3>
+                    <p class="look-description">A trendy and stylish look that features styled zigzag braids for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Three-Strand-Twist-Out-Style.webp" alt="Three Strand Twist Out Style">
+                <div class="look-overlay">
+                    <h3 class="look-title">Three Strand Twist Out Style</h3>
+                    <p class="look-description">A trendy and stylish look that features three strand twist out style for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Two-High-Buns-With-Tendrils.jpg" alt="Two High Buns With Tendrils">
+                <div class="look-overlay">
+                    <h3 class="look-title">Two High Buns With Tendrils</h3>
+                    <p class="look-description">A trendy and stylish look that features two high buns with tendrils for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Two-Layer-Feed-In-Braids.jpg" alt="Two Layer Feed In Braids">
+                <div class="look-overlay">
+                    <h3 class="look-title">Two Layer Feed In Braids</h3>
+                    <p class="look-description">A trendy and stylish look that features two layer feed in braids for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Two-Strand-Twists.jpg" alt="Two Strand Twists">
+                <div class="look-overlay">
+                    <h3 class="look-title">Two Strand Twists</h3>
+                    <p class="look-description">A trendy and stylish look that features two strand twists for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Wash-And-Go-Hairstyle.webp" alt="Wash And Go Hairstyle">
+                <div class="look-overlay">
+                    <h3 class="look-title">Wash And Go Hairstyle</h3>
+                    <p class="look-description">A trendy and stylish look that features wash and go hairstyle for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+            <div class="look-item">
+                <img src="/assets/images/Wool-Twists-Style.jpg" alt="Wool Twists Style">
+                <div class="look-overlay">
+                    <h3 class="look-title">Wool Twists Style</h3>
+                    <p class="look-description">A trendy and stylish look that features wool twists style for a modern and fashionable appearance.</p>
+                </div>
+            </div>
+
+            </div>
+
+                <!-- Right Arrow -->
+                <button class="carousel-arrow right-arrow" onclick="scrollLooks('right')" aria-label="Scroll right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">Have a Look, Find Your Look</h2>
+        <p class="section-subtitle">Explore our portfolio of transformations</p>
+        
+     <div class="gallery-carousel-container">
+
+        <!-- Left Arrow -->
+        <button class="gallery-arrow left-arrow" onclick="scrollGallery('left')" aria-label="Scroll left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+
+         <!-- gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+
+            <div class="gallery-item">
+                <img src="/assets/images/Wool-Twists-Style.jpg" alt="Gallery 1">
+                 
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Wash-And-Go-Hairstyle.webp" alt="Gallery 2">
+                    
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Two-Strand-Twists.jpg" alt="Gallery 3">
+                
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Two-Layer-Feed-In-Braids.jpg" alt="Gallery 4">
+                
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Two-High-Buns-With-Tendrils.jpg " alt="Gallery 5">
+                
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Three-Strand-Twist-Out-Style.webp " alt="Gallery 6">
+                
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Styled-Zigzag-Braids.jpg " alt="Gallery 7">
+                
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Stitch-Braids-Style.jpg " alt="Gallery 8">
+                
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Small-Senegalese-Twists.jpg" alt="Gallery 9">
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Simple-Cute-Feedin-Braids.jpg" alt="Gallery 10">
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Short-Cornrows-With-Curly-Baby-Hairs.jpg" alt="Gallery 11">
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Sassy-Crochet-With-Boho-Twist-Curls.jpg" alt="Gallery 12">
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Salt-Pepper-Bantu-Knots.jpg" alt="Gallery 13">
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Rubber-Band-Style.jpg" alt="Gallery 14">
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/Natural-Long-Curls.jpg" alt="Gallery 15">
+            </div>
+
+
+
+
+
+                <!-- Right Arrow -->
+                <button class="gallery-arrow right-arrow" onclick="scrollGallery('right')" aria-label="Scroll right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+          </div>
+    </section>
+
+    
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Session</h2>
+            
+            <form class="booking-form" onsubmit="submitBooking(event)">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (WhatsApp)</label>
+                    <input type="tel" id="phone" placeholder="+27" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" required onchange="updatePrice()">
+                        <option value="">Choose a service...</option>
+                        <option value="Hair Styling" data-price="250">Hair Styling - From R250</option>
+                        <option value="Color" data-price="450">Color - From R450</option>
+                        <option value="Highlights" data-price="550">Highlights - From R550</option>
+                        <option value="Treatments" data-price="350">Treatments - From R350</option>
+                        <option value="Braiding" data-price="400">Braiding - From R400</option>
+                        <option value="Extensions" data-price="800">Extensions - From R800</option>
+                        <option value="Keratin Treatment" data-price="650">Keratin Treatment - From R650</option>
+                        <option value="Bridal Hair" data-price="1200">Bridal Hair - From R1200</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" required min="">
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Time</label>
+                    <div class="time-slots">
+                        <div class="time-slot" onclick="selectTime(this, '08:00')">08:00 AM</div>
+                        <div class="time-slot" onclick="selectTime(this, '09:00')">09:00 AM</div>
+                        <div class="time-slot" onclick="selectTime(this, '10:00')">10:00 AM</div>
+                        <div class="time-slot" onclick="selectTime(this, '11:00')">11:00 AM</div>
+                        <div class="time-slot" onclick="selectTime(this, '12:00')">12:00 PM</div>
+                        <div class="time-slot" onclick="selectTime(this, '13:00')">01:00 PM</div>
+                        <div class="time-slot" onclick="selectTime(this, '14:00')">02:00 PM</div>
+                        <div class="time-slot" onclick="selectTime(this, '15:00')">03:00 PM</div>
+                        <div class="time-slot" onclick="selectTime(this, '16:00')">04:00 PM</div>
+                        <div class="time-slot" onclick="selectTime(this, '17:00')">05:00 PM</div>
+                    </div>
+                    <input type="hidden" id="time" required>
+                </div>
+
+                <button type="button" class="booking-WhatsApp" onclick="submitBookingWhatsApp(event)">
+                    Confirm Booking via WhatsApp
+                </button>
+                <button type="button" class="booking-Gmail" onclick="submitBookingGmail(event)">
+                    Confirm Booking via Gmail
+                </button>
+            </form>
+        </div>
+    </div>
+
+ 
+<!-- Footer -->
+    <footer class="footer" id ="contact">
+        <div class="footer-content">
+            <div class="footer-logo">Muleka Salon</div>
+            <p class="footer-tagline">Your hair, our passion. Simple and beautiful results.</p>
+            
+            <div class="footer-social">
+                <a href="https://wa.me/27787659444?text=Hi%20Muleka%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment" class="footer-icon" target="_blank" aria-label="WhatsApp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                </a>
+                
+                <a href="tel:+27787659444" class="footer-icon" aria-label="Phone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </a>
+                
+                <a href="mailto:kalonjilubo12@gmail.com" class="footer-icon" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                
+                <button class="footer-icon" onclick="openBookingModal()" aria-label="Book Online">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="footer-info">
+                <p></p>South Street, Bellville Junction, Bellville, Cape Town, 7530</p>
+                <p>Monday - Sunday | 08:00 AM - 07:00 PM</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Muleka Salon. All rights reserved. Made by Kalonji Luboya.</p>
+            </div>
+        </div>
+    </footer>
+  </section>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
+
