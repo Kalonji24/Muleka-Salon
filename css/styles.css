@@ -213,7 +213,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.8rem;
+            font-size: 30px;
             font-weight: 300;
             letter-spacing: 3px;
             margin-bottom: 2rem;
@@ -221,7 +221,7 @@
         }
 
         .hero-tagline {
-            font-size: 1.1rem;
+            font-size: 30px;
             line-height: 1.8;
             max-width: 500px;
             margin-bottom: 2.5rem;
@@ -679,8 +679,12 @@
 
         .booking-WhatsApp {
             padding: 1.2rem;
+            background: var(--dark); 
+            color: white; 
+            /*
             background: transparent;
             color: var(--dark);
+            */
             border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
@@ -693,14 +697,22 @@
         }
 
         .booking-WhatsApp:hover {
+            background: transparent; 
+            color: var(--dark); 
+            /* 
             background: var(--dark); 
-            color: white;
+            color: white; 
+            */
         }
 
         .booking-Gmail {
             padding: 1.2rem;
+            /* 
             background: transparent; 
-            color: var(--dark);
+            color: var(--dark); 
+            */
+            background: var(--dark); 
+            color: white;
             border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
@@ -713,8 +725,12 @@
         }
 
         .booking-Gmail:hover {
+            /*
             background: var(--dark);
             color: white;
+            */
+           background: transparent; 
+           color: var(--dark); 
         }
 
 
@@ -1017,8 +1033,8 @@
 }
 
 .footer-icon:hover {
-    background: #817f7d;
-    color: #696b6a;
+    background: white;
+    color: black;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
 }
