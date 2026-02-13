@@ -76,7 +76,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .book-btn {
@@ -161,12 +161,12 @@
             font-weight: 400;
             letter-spacing: 0.5px;
             display: block;
-            padding: 0.5rem 0;
+            padding: 0.5rem 130px;
             transition: color 0.3s;
         }
 
         .mobile-menu a:hover {
-            color: var(--primary);
+            color: #f8f6f3;
         }
 
         .mobile-menu .book-btn {
@@ -557,25 +557,43 @@
             }
         }
 
+
         /* Signature Looks Section */
         .signature-looks {
             padding: 6rem 5%;
             background: var(--light);
         }
 
-        .looks-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+        /* Desktop - Show multiple images */
+        .looks-carousel-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
         }
 
+        .looks-grid {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 30px;
+            padding: 20px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .looks-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Desktop - Multiple items visible */
         .look-item {
+            flex: 0 0 300px;
+            min-width: 300px;
             position: relative;
             overflow: hidden;
             aspect-ratio: 3/4;
             cursor: pointer;
-            flex: 0 0 400px;
-            min-width: 400px;
         }
 
         .look-item img {
@@ -583,10 +601,11 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
+            border-radius: 10px;
         }
 
         .look-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .look-overlay {
@@ -616,6 +635,183 @@
             font-size: 0.9rem;
             opacity: 0.9;
         }
+
+        /* Carousel Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 165, 116, 0.9);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-arrow:hover {
+            background: #D4A574;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        .carousel-arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .looks-carousel-container .left-arrow {
+            left: 0;
+        }
+
+        .looks-carousel-container .right-arrow {
+            right: 0;
+        }
+
+        /* MOBILE & TABLET - Show ONE image only */
+
+        /* Tablets (768px - 991px) - ONE image */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .looks-carousel-container {
+                max-width: 500px;
+                padding: 0 60px;
+            }
+            
+            .look-item {
+                flex: 0 0 100%;  /* ONE image */
+                min-width: 100%;
+            }
+            
+            .looks-grid {
+                gap: 20px;
+            }
+        }
+
+        /* Small Tablets (576px - 767px) - ONE image */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .looks-carousel-container {
+                max-width: 450px;
+                padding: 0 55px;
+            }
+            
+            .look-item {
+                flex: 0 0 100%;  /* ONE image */
+                min-width: 100%;
+            }
+            
+            .looks-grid {
+                gap: 12px;
+                padding: 20px 19px;
+
+            }
+            
+            .look-title {
+                font-size: 1.3rem;
+            }
+            
+            .look-description {
+                font-size: 0.85rem;
+            }
+            
+            .carousel-arrow {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .carousel-arrow svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        /* Mobile Phones (less than 576px) - ONE image */
+        @media (max-width: 575.98px) {
+            .signature-looks {
+                padding: 4rem 5%;
+            }
+            
+            .looks-carousel-container {
+                max-width: 380px;  /* ONE image container */
+                padding: 0 50px;
+            }
+            
+            .look-item {
+                flex: 0 0 100%;  /* ONE image takes full width */
+                min-width: 100%;
+            }
+            
+            .looks-grid {
+                gap: 12px;
+                padding:20px 0px;
+            }
+            
+            .look-overlay {
+                padding: 1.5rem;
+            }
+            
+            .look-title {
+                font-size: 1.2rem;
+            }
+            
+            .look-description {
+                font-size: 0.85rem;
+            }
+            
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-arrow svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .looks-carousel-container .left-arrow {
+                left: 5px;
+            }
+            
+            .looks-carousel-container .right-arrow {
+                right: 5px;
+            }
+        }
+
+        /* Extra Small Phones (less than 400px) - ONE image */
+        @media (max-width: 399.98px) {
+            .looks-carousel-container {
+                max-width: 320px;
+                padding: 0 45px;
+            }
+            
+            .look-title {
+                font-size: 1.1rem;
+            }
+            
+            .look-description {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Large Desktops (1200px and up) - Multiple images */
+        @media (min-width: 1200px) {
+            .looks-carousel-container {
+                max-width: 1600px;
+            }
+            
+            .look-item {
+                flex: 0 0 350px;
+                min-width: 350px;
+            }
+        }
+
+
+
 
         /* Quote Section */
         .quote-section {

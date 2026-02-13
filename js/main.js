@@ -211,61 +211,60 @@ if (looksGrid) {
 }
 
 
-/*
-// Scroll Gallery Carousel
-function scrollGallery(direction) {
-    const galleryGrid = document.getElementById('galleryGrid');
-    const scrollAmount = 370; // Width of one item + gap
+// // Scroll Gallery Carousel
+// function scrollGallery(direction) {
+//     const galleryGrid = document.getElementById('galleryGrid');
+//     const scrollAmount = 370; // Width of one item + gap
     
-    if (direction === 'left') {
-        galleryGrid.scrollBy({
-            left: -scrollAmount,
-            behavior: 'smooth'
-        });
-    } else if (direction === 'right') {
-        galleryGrid.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    }
-}
+//     if (direction === 'left') {
+//         galleryGrid.scrollBy({
+//             left: -scrollAmount,
+//             behavior: 'smooth'
+//         });
+//     } else if (direction === 'right') {
+//         galleryGrid.scrollBy({
+//             left: scrollAmount,
+//             behavior: 'smooth'
+//         });
+//     }
+// }
 
-// Update Gallery Arrows Visibility
-function updateGalleryArrowsVisibility() {
-    const galleryGrid = document.getElementById('galleryGrid');
-    const leftArrow = document.querySelector('.gallery-carousel-container .carousel-arrow.left-arrow');
-    const rightArrow = document.querySelector('.gallery-carousel-container .carousel-arrow.right-arrow');
+// // Update Gallery Arrows Visibility
+// function updateGalleryArrowsVisibility() {
+//     const galleryGrid = document.getElementById('galleryGrid');
+//     const leftArrow = document.querySelector('.gallery-carousel-container .carousel-arrow.left-arrow');
+//     const rightArrow = document.querySelector('.gallery-carousel-container .carousel-arrow.right-arrow');
     
-    if (galleryGrid && leftArrow && rightArrow) {
-        // Hide left arrow at start
-        if (galleryGrid.scrollLeft <= 0) {
-            leftArrow.style.opacity = '0.3';
-            leftArrow.style.pointerEvents = 'none';
-        } else {
-            leftArrow.style.opacity = '1';
-            leftArrow.style.pointerEvents = 'auto';
-        }
+//     if (galleryGrid && leftArrow && rightArrow) {
+//         // Hide left arrow at start
+//         if (galleryGrid.scrollLeft <= 0) {
+//             leftArrow.style.opacity = '0.3';
+//             leftArrow.style.pointerEvents = 'none';
+//         } else {
+//             leftArrow.style.opacity = '1';
+//             leftArrow.style.pointerEvents = 'auto';
+//         }
         
-        // Hide right arrow at end
-        if (galleryGrid.scrollLeft + galleryGrid.clientWidth >= galleryGrid.scrollWidth - 10) {
-            rightArrow.style.opacity = '0.3';
-            rightArrow.style.pointerEvents = 'none';
-        } else {
-            rightArrow.style.opacity = '1';
-            rightArrow.style.pointerEvents = 'auto';
-        }
-    }
-}
+//         // Hide right arrow at end
+//         if (galleryGrid.scrollLeft + galleryGrid.clientWidth >= galleryGrid.scrollWidth - 10) {
+//             rightArrow.style.opacity = '0.3';
+//             rightArrow.style.pointerEvents = 'none';
+//         } else {
+//             rightArrow.style.opacity = '1';
+//             rightArrow.style.pointerEvents = 'auto';
+//         }
+//     }
+// }
 
-// Listen for gallery scroll events
-const galleryGrid = document.getElementById('galleryGrid');
-if (galleryGrid) {
-    galleryGrid.addEventListener('scroll', updateGalleryArrowsVisibility);
-    // Initial check
-    updateGalleryArrowsVisibility();
-}
+// // Listen for gallery scroll events
+// const galleryGrid = document.getElementById('galleryGrid');
+// if (galleryGrid) {
+//     galleryGrid.addEventListener('scroll', updateGalleryArrowsVisibility);
+//     // Initial check
+//     updateGalleryArrowsVisibility();
+// }
 
-*/
+// */
 
 
 
