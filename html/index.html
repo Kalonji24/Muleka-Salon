@@ -19,6 +19,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
         </ul>
         
         <button class="book-btn" onclick="openBookingModal()">Book Now</button>
@@ -35,6 +36,7 @@
             <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
             <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
             <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            <li><a href="#about" onclick="closeMobileMenu()">About Us</a></li>
         </ul>
         <button class="book-btn" onclick="openBookingModal(); closeMobileMenu();">Book Now</button>
     </div>
@@ -174,7 +176,6 @@
 
                 <!-- Looks Grid -->
         <div class="looks-grid" id="looksGrid">
-
 
             <div class="look-item">
                 <img src="/assets/images/Blow-Dried-Half-And-Half-Hairstyle.jpg " alt="Blow-Dried Half & Half Hairstyle">
@@ -518,10 +519,6 @@
                 <img src="/assets/images/Natural-Long-Curls.jpg" alt="Gallery 15">
             </div>
 
-
-
-
-
                 <!-- Right Arrow -->
                 <button class="gallery-arrow right-arrow" onclick="scrollGallery('right')" aria-label="Scroll right">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -595,7 +592,79 @@
         </div>
     </div>
 
- 
+<!-- About Us Section -->
+    <section class="about-us" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-story">
+                    <h3 class="about-subtitle">Our Story</h3>
+                    <p>
+                        Welcome to Muleka Salon, where beauty meets passion. For over 16 years, we have been creating 
+                        beautiful hairstyles and making women and children feel confident and special.
+                    </p>
+                    <p>
+                        Our journey started with a simple dream: to help people look and feel their best. What began as 
+                        a small passion for hairdressing has grown into a full-service salon specializing in African hair care, 
+                        makeup artistry, and nail services.
+                    </p>
+                    <p>
+                        At Muleka Salon, we understand African hair. We know how to care for it, style it, and make it shine. 
+                        From beautiful braids to stunning natural styles, from elegant updos to protective hairstyles - we do it all 
+                        with love and skill.
+                    </p>
+                </div>
+
+                <div class="about-experience">
+                    <h3 class="about-subtitle">16 Years of Experience</h3>
+                    <p>
+                        With 16 years of experience, we have perfected our craft. Every client who sits in our chair receives 
+                        expert care and personalized attention. We don't just do hair - we listen to your needs, understand 
+                        your style, and create looks that make you happy.
+                    </p>
+                </div>
+
+                <div class="about-services">
+                    <h3 class="about-subtitle">What We Do</h3>
+                    <div class="about-services-list">
+                        <div class="about-service-item">
+                            <div class="service-icon"></div>
+                            <h4>Hairdressing</h4>
+                            <p>Expert African hair styling, braiding, weaving, and natural hair care</p>
+                        </div>
+                        <div class="about-service-item">
+                            <div class="service-icon"></div>
+                            <h4>Makeup Artistry</h4>
+                            <p>Beautiful makeup for weddings, events, and special occasions</p>
+                        </div>
+                        <div class="about-service-item">
+                            <div class="service-icon"></div>
+                            <h4>Nail Services</h4>
+                            <p>Professional nail care, manicures, and beautiful nail designs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-promise">
+                    <h3 class="about-subtitle">Our Promise to You</h3>
+                    <p>
+                        When you visit Muleka Salon, you're not just a client - you're family. We treat your hair with care, 
+                        we listen to what you want, and we make sure you leave happy. Every style we create comes from 16 years 
+                        of experience and a genuine love for making people feel beautiful.
+                    </p>
+                    <p>
+                        Come visit us in Bellville and experience the Muleka difference. Your hair deserves the best care, 
+                        and that's exactly what we give.
+                    </p>
+                </div>
+
+                <div class="about-cta">
+                    <button class="btn-primary" onclick="openBookingModal()">Book Your Appointment Today</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <!-- Footer -->
     <footer class="footer" id ="contact">
         <div class="footer-content">

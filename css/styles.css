@@ -89,6 +89,7 @@
             font-size: 1rem;
             transition: all 0.3s;
             letter-spacing: 1px;
+            display: none;
         }
 
         .book-btn:hover {
@@ -511,7 +512,7 @@
             margin: 3% auto;
             padding: 3rem;
             max-width: 600px;
-            height: 870px;
+            height: 814px;
             border-radius: 2px;
             position: relative;
             animation: slideDown 0.3s;
@@ -608,11 +609,9 @@
             border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
-            /* font-size: 1.1rem; */
             letter-spacing: 1px;
             transition: all 0.3s;
-            bottom: 38px;
-            /*right: 12px;*/
+            bottom: 50px;
             position: absolute;
         }
 
@@ -636,11 +635,10 @@
             border-radius: 25px;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
-            /* font-size: 1.1rem; */
             letter-spacing: 1px;
             transition: all 0.3s;
-            bottom: 38px;
-            right: 12px;
+            bottom: 54px;
+            right: 48px;
             position: absolute;
         }
 
@@ -816,6 +814,55 @@
             .contact-btn {
                 width: 100%;
             }
+
+            /* Navigation - About Us Link Styling */
+            .nav-links li:last-child a {
+                /* Optional: Make About Us stand out slightly */
+                font-weight: 500;
+            }
+
+            /* Mobile Menu - About Us Link */
+            .mobile-menu ul li:last-child {
+                border-bottom: none; /* Remove border from last item if needed */
+            }
+
+            .mobile-menu ul li:last-child a {
+                font-weight: 500;
+            }
+
+            /* Smooth scroll offset for fixed nav (optional enhancement) */
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 100px; /* Accounts for fixed nav height */
+            }
+
+            /* About section styling (hero section as about) */
+            #about {
+                scroll-margin-top: 80px; /* Offset for fixed navigation */
+            }
+
+            /* Mobile specific adjustments */
+            @media (max-width: 767.98px) {
+                #about {
+                    scroll-margin-top: 70px;
+                }
+                
+                html {
+                    scroll-padding-top: 80px;
+                }
+            }
+
+            /* Desktop hover effect for About Us */
+            @media (min-width: 768px) {
+                .nav-links li:last-child a:hover {
+                    color: var(--primary);
+                    text-decoration: underline;
+                    text-decoration-color: var(--secondary);
+                    text-decoration-thickness: 2px;
+                    text-underline-offset: 4px;
+                }
+            }
+
 
             .modal-content {
                 margin: 5% 5%;
@@ -2087,4 +2134,270 @@ body {
     }
 }
 
+/* ==========================================
+   ABOUT US SECTION
+   ========================================== */
+
+.about-us {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, var(--light) 0%, #fff 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-style: italic;
+}
+
+.about-story,
+.about-experience,
+.about-services,
+.about-promise {
+    margin-bottom: 3rem;
+}
+
+.about-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color:#282f2d;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.about-story p,
+.about-experience p,
+.about-promise p {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+    text-align: justify;
+}
+
+/* About Services List */
+.about-services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.about-service-item {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, var(--pink) 0%, var(--accent) 100%);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    border: 2px solid #282f2d;
+}
+
+.about-service-item:hover {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(23, 24, 23, 0.2);
+    border-color: var(--dark);
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.about-service-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.about-service-item p {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--dark);
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* About CTA */
+.about-cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--accent);
+}
+
+.about-cta .btn-primary {
+    padding: 1.3rem 3.5rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+    background: transparent;
+    color: black;
+    /* border: 2px solid var(--primary); */
+}
+
+.about-cta .btn-primary:hover {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+    transform: translateY(-3px);
+    /* box-shadow: 0 10px 25px var(--dark); */
+}
+
+/* About Us Responsive Design */
+@media (max-width: 991.98px) {
+    .about-services-list {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-service-item {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-us {
+        padding: 4rem 5%;
+    }
+    
+    .about-content .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .about-story p,
+    .about-experience p,
+    .about-promise p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+    
+    .about-service-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .service-icon {
+        font-size: 3rem;
+    }
+    
+    .about-service-item h4 {
+        font-size: 1.4rem;
+    }
+    
+    .about-service-item p {
+        font-size: 1rem;
+    }
+    
+    .about-cta .btn-primary {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-us {
+        padding: 3rem 5%;
+    }
+    
+    .about-content .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .about-story p,
+    .about-experience p,
+    .about-promise p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+        text-align: left;
+    }
+    
+    .about-story,
+    .about-experience,
+    .about-services,
+    .about-promise {
+        margin-bottom: 2.5rem;
+    }
+    
+    .about-services-list {
+        gap: 1.5rem;
+    }
+    
+    .about-service-item {
+        padding: 1.8rem 1.2rem;
+    }
+    
+    .service-icon {
+        font-size: 2.5rem;
+    }
+    
+    .about-service-item h4 {
+        font-size: 1.3rem;
+    }
+    
+    .about-service-item p {
+        font-size: 0.95rem;
+    }
+    
+    .about-cta {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+    
+    .about-cta .btn-primary {
+        width: 100%;
+        padding: 1.1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Using your existing images */
+.about-service-item:nth-child(1) {
+    /* background: url(''); */
+    background-size: cover;
+    background-position: center;
+}
+
+.about-service-item:nth-child(2) {
+    /* background: url(''); */
+    background-size: cover;
+    background-position: center;
+}
+
+.about-service-item:nth-child(3) {
+    /* background: url(''); */
+    background-size: cover;
+    background-position: center;
+}
 
