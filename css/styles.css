@@ -285,7 +285,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
-        /* Services Section */
+        /* Services Section with Carousel */
         .services {
             padding: 6rem 5%;
             background: white;
@@ -296,39 +296,65 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             font-style: italic;
+            text-align: center;
         }
 
         .section-subtitle {
             font-size: 1.1rem;
             max-width: 600px;
-            margin-bottom: 4rem;
+            margin: 0 auto 4rem;
             opacity: 0.7;
             line-height: 1.8;
+            text-align: center;
         }
 
+        /* Services Carousel Container */
+        .services-carousel-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        /* Services Grid - Horizontal Scroll */
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 0;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
+        .services-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Service Item Card */
         .service-item {
-            padding: 2.5rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            flex: 0 0 350px;
+            min-width: 350px;
+            padding: 2.5rem 2rem;
+            border: 2px solid #282f2d;
+            border-radius: 15px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: all 0.3s;
-            background: white;
+            transition: all 0.3s ease;
+            background:  white;
             cursor: pointer;
         }
 
         .service-item:hover {
-            background: var(--pink);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+
+        .service-content {
+            flex: 1;
         }
 
         .service-header {
@@ -336,33 +362,41 @@
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .service-name {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0;
+            font-style: italic;
         }
 
         .service-price {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--primary);
             font-weight: 500;
+            white-space: nowrap;
+            display: none; /* Hide price on mobile */
         }
 
         .service-description {
             opacity: 0.7;
             line-height: 1.6;
             margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
         .service-book-btn {
             background: transparent;
             color: var(--dark);
-            border-radius: 25px;
-            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--dark);
+            border-radius: 30px;
+            padding: 0.8rem 1.8rem;
             cursor: pointer;
             font-family: 'Jost', sans-serif;
+            font-size: 1rem;
             align-self: flex-start;
             transition: all 0.3s;
             margin-top: auto;
@@ -371,7 +405,156 @@
         .service-book-btn:hover {
             background: var(--dark);
             color: white;
+        }
 
+        /* Services Arrows */
+        .services-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: #74706d;
+            /* background: rgba(0, 0, 0, 0.15); */
+            border: none;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .services-arrow:hover {
+            background: rgba(0, 0, 0, 0.15);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        .services-arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .services-carousel-container .left-arrow {
+            left: 0;
+        }
+
+        .services-carousel-container .right-arrow {
+            right: 0;
+        }
+
+        /* Responsive Design for Services */
+
+        /* Large Tablets and Small Desktops (768px - 1199px) */
+        @media (min-width: 768px) and (max-width: 1199.98px) {
+            .services-carousel-container {
+                padding: 0 55px;
+            }
+            
+            .service-item {
+                flex: 0 0 320px;
+                min-width: 320px;
+            }
+        }
+
+        /* Tablets (576px - 767px) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .services-carousel-container {
+                padding: 0 50px;
+            }
+            
+            .service-item {
+                flex: 0 0 280px;
+                min-width: 280px;
+                padding: 2rem 1.5rem;
+            }
+            
+            .service-name {
+                font-size: 1.5rem;
+            }
+            
+            .service-price {
+                font-size: 1rem;
+            }
+            
+            .services-arrow {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .services-arrow svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        /* Mobile Phones (less than 576px) */
+        @media (max-width: 575.98px) {
+            .services {
+                padding: 4rem 5%;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 3rem;
+            }
+            
+            .services-carousel-container {
+                padding: 0 50px;
+            }
+            
+            .service-item {
+                flex: 0 0 260px;
+                min-width: 260px;
+                padding: 1.8rem 1.2rem;
+            }
+            
+            .service-name {
+                font-size: 1.4rem;
+            }
+            
+            .service-price {
+                font-size: 1rem;
+            }
+            
+            .service-description {
+                font-size: 0.9rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .service-book-btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .services-arrow {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .services-arrow svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .services-carousel-container .left-arrow {
+                left: 5px;
+            }
+            
+            .services-carousel-container .right-arrow {
+                right: 5px;
+            }
         }
 
         /* Signature Looks Section */
@@ -451,7 +634,7 @@
             color: var(--dark);
         }
 
-        /* Gallery Section */
+        /* Gallery Section 
         .gallery {
             padding: 6rem 5%;
             background: white;
@@ -480,7 +663,7 @@
         .gallery-item:hover img {
             transform: scale(1.1);
         }
-       
+        */
 
         .style-name {
             position: absolute;
@@ -1364,7 +1547,7 @@ body {
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background: rgba(212, 165, 116, 0.9);
+    background: #74706d;
     border: none;
     border-radius: 50%;
     color: white;
@@ -1378,7 +1561,8 @@ body {
 }
 
 .carousel-arrow:hover {
-    background: #D4A574;
+    /* background: #74706d; */
+    background: rgba(0, 0, 0, 0.15);
     transform: translateY(-50%) scale(1.1);
     box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
 }
@@ -1729,7 +1913,7 @@ body {
         right: 5px;
     }
     
-    /* Gallery Section */
+    /* Gallery Section
     .gallery {
         padding: 50px 20px;
     }
@@ -1769,7 +1953,7 @@ body {
     
     .gallery-carousel-container .right-arrow {
         right: 5px;
-    }
+    } */
     
     /* Booking Modal */
     .modal-content {
@@ -2201,14 +2385,14 @@ body {
 .about-service-item {
     text-align: center;
     padding: 2.5rem 2rem;
-    background: linear-gradient(135deg, var(--pink) 0%, var(--accent) 100%);
+    background: linear-gradient(135deg, #f8f6f3 0%, #f8f6f3 100%);
     border-radius: 15px;
     transition: all 0.4s ease;
     border: 2px solid #282f2d;
 }
 
 .about-service-item:hover {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(23, 24, 23, 0.2);
     border-color: var(--dark);
@@ -2243,7 +2427,7 @@ body {
     text-align: center;
     margin-top: 4rem;
     padding-top: 3rem;
-    border-top: 2px solid var(--accent);
+    border-top: 2px solid #282f2d;
 }
 
 .about-cta .btn-primary {

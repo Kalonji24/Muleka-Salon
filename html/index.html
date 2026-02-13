@@ -16,10 +16,12 @@
            <span class="logo-text">Muleka Salon</span>
            </div>
         <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <!-- <li><a href="#gallery">Gallery</a></li> -->
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About Us</a></li>
+           
         </ul>
         
         <button class="book-btn" onclick="openBookingModal()">Book Now</button>
@@ -33,16 +35,18 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <ul>
+            <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
             <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
-            <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+            <!-- <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li> -->
             <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
             <li><a href="#about" onclick="closeMobileMenu()">About Us</a></li>
+            
         </ul>
         <button class="book-btn" onclick="openBookingModal(); closeMobileMenu();">Book Now</button>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-subtitle">BELLVILLE'S FINEST</div>
             <h1 class="hero-title">Muleka Salon</h1>
@@ -61,15 +65,23 @@
     <section class="services" id="services">
         <h2 class="section-title">Our Services</h2>
         <p class="section-subtitle">Look good, feel amazing. We style hair for women and kids.</p>
-        
-        <div class="services-grid">
+
+        <div class="services-carousel-container">
+                <!-- Left Arrow -->
+                <button class="services-arrow left-arrow" onclick="scrollServices('left')" aria-label="Scroll left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+        <div class="services-grid" id="servicesGrid">
             <div class="service-item">
                 <div>
                     <div class="service-header">
                         <h3 class="service-name">Hair Styling</h3>
                         <div class="service-price">From R250</div>
                     </div>
-                    <p class="service-description">Expert cuts, blowouts, and styling tailored to enhance your natural beauty and personal style.</p>
+                    <p class="service-description">Professional haircuts, blowouts, and styling to bring out your natural beauty and personal style.</p>
                 </div>
                 <button class="service-book-btn" onclick="openBookingModal('Hair Styling', 250)">Book Now</button>
             </div>
@@ -78,22 +90,22 @@
                 <div>
                     <div class="service-header">
                         <h3 class="service-name">Color</h3>
-                        <div class="service-price">From R450</div>
+                        <div class="service-price">From R200</div>
                     </div>
-                    <p class="service-description">High-shine, low-tox color treatments with ChromaGlaze technology for vibrant, healthy hair.</p>
+                    <p class="service-description">Shiny, gentle color treatments that keep your hair healthy.</p>
                 </div>
-                <button class="service-book-btn" onclick="openBookingModal('Color', 450)">Book Now</button>
+                <button class="service-book-btn" onclick="openBookingModal('Color', 200)">Book Now</button>
             </div>
 
             <div class="service-item">
                 <div>
                     <div class="service-header">
                         <h3 class="service-name">Highlights</h3>
-                        <div class="service-price">From R550</div>
+                        <div class="service-price">From R250</div>
                     </div>
-                    <p class="service-description">LightWeave highlighting technique for weightless, natural-looking dimension and face framing.</p>
+                    <p class="service-description">Beautiful highlights for a light, fresh, and natural glow.</p>
                 </div>
-                <button class="service-book-btn" onclick="openBookingModal('Highlights', 550)">Book Now</button>
+                <button class="service-book-btn" onclick="openBookingModal('Highlights', 250)">Book Now</button>
             </div>
 
             <div class="service-item">
@@ -102,7 +114,7 @@
                         <h3 class="service-name">Treatments</h3>
                         <div class="service-price">From R350</div>
                     </div>
-                    <p class="service-description">Intensive repair and nourishment treatments to restore hair health and brilliance.</p>
+                    <p class="service-description">Hair treatments that repair damage and add shine.</p>
                 </div>
                 <button class="service-book-btn" onclick="openBookingModal('Treatments', 350)">Book Now</button>
             </div>
@@ -111,24 +123,25 @@
                 <div>
                     <div class="service-header">
                         <h3 class="service-name">Braiding</h3>
-                        <div class="service-price">From R400</div>
+                        <div class="service-price">From R300</div>
                     </div>
-                    <p class="service-description">Intricate braiding styles from classic to contemporary, created with precision and care.</p>
+                    <p class="service-description">From traditional to trendy, we create braids you will love.</p>
                 </div>
-                <button class="service-book-btn" onclick="openBookingModal('Braiding', 400)">Book Now</button>
+                <button class="service-book-btn" onclick="openBookingModal('Braiding', 300)">Book Now</button>
             </div>
 
             <div class="service-item">
                 <div>
                     <div class="service-header">
                         <h3 class="service-name">Extensions</h3>
-                        <div class="service-price">From R800</div>
+                        <div class="service-price">From R500</div>
                     </div>
-                    <p class="service-description">Premium hair extensions for length, volume, and versatility with seamless integration.</p>
+                    <p class="service-description">Add length, fullness, and style with our hair extensions.</p>
                 </div>
-                <button class="service-book-btn" onclick="openBookingModal('Extensions', 800)">Book Now</button>
+                <button class="service-book-btn" onclick="openBookingModal('Extensions', 500)">Book Now</button>
             </div>
 
+     <!--  
             <div class="service-item">
                 <div>
                     <div class="service-header">
@@ -150,6 +163,49 @@
                 </div>
                 <button class="service-book-btn" onclick="openBookingModal('Bridal Hair', 1200)">Book Now</button>
             </div>
+        </div>
+    -->  
+        <div class="service-item">
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3 class="service-name">Makeup Artistry</h3>
+                                <div class="service-price">From R400</div>
+                            </div>
+                            <p class="service-description">Beautiful makeup to help you shine on your big day.</p>
+                        </div>
+                        <button class="service-book-btn" onclick="openBookingModal('Makeup Artistry', 400)">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3 class="service-name">Nail Services</h3>
+                                <div class="service-price">From R200</div>
+                            </div>
+                            <p class="service-description">Beautiful nail care to keep your hands and feet looking great.</p>
+                        </div>
+                        <button class="service-book-btn" onclick="openBookingModal('Nail Services', 200)">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3 class="service-name">Bridal Hair</h3>
+                                <div class="service-price">From R800</div>
+                            </div>
+                            <p class="service-description">Special hair styling for your wedding day. We help you look beautiful with a style you'll love.</p>
+                        </div>
+                        <button class="service-book-btn" onclick="openBookingModal('Bridal Hair', 800)">Book Now</button>
+                    </div>
+                </div>
+
+
+                <!-- Right Arrow -->
+                <button class="services-arrow right-arrow" onclick="scrollServices('right')" aria-label="Scroll right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
         </div>
     </section>
 
@@ -448,87 +504,86 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <h2 class="section-title">Have a Look, Find Your Look</h2>
-        <p class="section-subtitle">Explore our portfolio of transformations</p>
-        
-     <div class="gallery-carousel-container">
+            <!-- Gallery Section
+            <section class="gallery" id="gallery">
+                <h2 class="section-title">Have a Look, Find Your Look</h2>
+                <p class="section-subtitle">Explore our portfolio of transformations</p>
+                
+            <div class="gallery-carousel-container">
 
-        <!-- Left Arrow -->
-        <button class="gallery-arrow left-arrow" onclick="scrollGallery('left')" aria-label="Scroll left">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-        </button>
-
-         <!-- gallery Grid -->
-        <div class="gallery-grid" id="galleryGrid">
-
-            <div class="gallery-item">
-                <img src="/assets/images/Wool-Twists-Style.jpg" alt="Gallery 1">
-                 
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Wash-And-Go-Hairstyle.webp" alt="Gallery 2">
-                    
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Two-Strand-Twists.jpg" alt="Gallery 3">
-                
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Two-Layer-Feed-In-Braids.jpg" alt="Gallery 4">
-                
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Two-High-Buns-With-Tendrils.jpg " alt="Gallery 5">
-                
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Three-Strand-Twist-Out-Style.webp " alt="Gallery 6">
-                
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Styled-Zigzag-Braids.jpg " alt="Gallery 7">
-                
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Stitch-Braids-Style.jpg " alt="Gallery 8">
-                
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Small-Senegalese-Twists.jpg" alt="Gallery 9">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Simple-Cute-Feedin-Braids.jpg" alt="Gallery 10">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Short-Cornrows-With-Curly-Baby-Hairs.jpg" alt="Gallery 11">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Sassy-Crochet-With-Boho-Twist-Curls.jpg" alt="Gallery 12">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Salt-Pepper-Bantu-Knots.jpg" alt="Gallery 13">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Rubber-Band-Style.jpg" alt="Gallery 14">
-            </div>
-            <div class="gallery-item">
-                <img src="/assets/images/Natural-Long-Curls.jpg" alt="Gallery 15">
-            </div>
-
-                <!-- Right Arrow -->
-                <button class="gallery-arrow right-arrow" onclick="scrollGallery('right')" aria-label="Scroll right">
+                Left Arrow 
+                <button class="gallery-arrow left-arrow" onclick="scrollGallery('left')" aria-label="Scroll left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
+                        <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-          </div>
-    </section>
 
-    
+                 gallery Grid 
+                <div class="gallery-grid" id="galleryGrid">
+
+                    <div class="gallery-item">
+                        <img src="/assets/images/Freestyle-Stitch-Bun-Curls.jpg" alt="Gallery 1">
+                        
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Wash-And-Go-Hairstyle.webp" alt="Gallery 2">
+                            
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Two-Strand-Twists.jpg" alt="Gallery 3">
+                        
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Two-Layer-Feed-In-Braids.jpg" alt="Gallery 4">
+                        
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Braids-Beads-Hairstyle.jpg " alt="Gallery 5">
+                        
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Medium-Fulani-Knotless-Braids.jpg" alt="Gallery 6">
+                        
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Styled-Zigzag-Braids.jpg " alt="Gallery 7">
+                        
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Stitch-Braids-Style.jpg " alt="Gallery 8">
+                        
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Small-Senegalese-Twists.jpg" alt="Gallery 9">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Simple-Cute-Feedin-Braids.jpg" alt="Gallery 10">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Short-Cornrows-With-Curly-Baby-Hairs.jpg" alt="Gallery 11">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Sassy-Crochet-With-Boho-Twist-Curls.jpg" alt="Gallery 12">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Salt-Pepper-Bantu-Knots.jpg" alt="Gallery 13">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Rubber-Band-Style.jpg" alt="Gallery 14">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/assets/images/Natural-Long-Curls.jpg" alt="Gallery 15">
+                    </div>
+
+                        Right Arrow
+                        <button class="gallery-arrow right-arrow" onclick="scrollGallery('right')" aria-label="Scroll right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                </div>
+            </section> --> 
+
     <!-- Booking Modal -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
@@ -551,13 +606,15 @@
                     <select id="service" required onchange="updatePrice()">
                         <option value="">Choose a service...</option>
                         <option value="Hair Styling" data-price="250">Hair Styling - From R250</option>
-                        <option value="Color" data-price="450">Color - From R450</option>
-                        <option value="Highlights" data-price="550">Highlights - From R550</option>
-                        <option value="Treatments" data-price="350">Treatments - From R350</option>
-                        <option value="Braiding" data-price="400">Braiding - From R400</option>
-                        <option value="Extensions" data-price="800">Extensions - From R800</option>
-                        <option value="Keratin Treatment" data-price="650">Keratin Treatment - From R650</option>
-                        <option value="Bridal Hair" data-price="1200">Bridal Hair - From R1200</option>
+                        <option value="Color" data-price="200">Color - From R200</option>
+                        <option value="Highlights" data-price="350">Highlights - From R250</option>
+                        <option value="Treatments" data-price="200">Treatments - From R350</option>
+                        <option value="Braiding" data-price="300">Braiding - From R300</option>
+                        <option value="Extensions" data-price="500">Extensions - From R500</option>
+                        <option value="Makeup Artistry" data-price="300">Makeup Artistry - From R400</option>
+                        <option value="Nail Services" data-price="200">Nail Services - From R200</option>
+                        <!-- <option value="Keratin Treatment" data-price="650">Keratin Treatment - From R650</option> -->
+                        <option value="Bridal Hair" data-price="800">Bridal Hair - From R800</option>
                     </select>
                 </div>
 

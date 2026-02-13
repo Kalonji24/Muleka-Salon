@@ -211,6 +211,7 @@ if (looksGrid) {
 }
 
 
+/*
 // Scroll Gallery Carousel
 function scrollGallery(direction) {
     const galleryGrid = document.getElementById('galleryGrid');
@@ -264,4 +265,59 @@ if (galleryGrid) {
     updateGalleryArrowsVisibility();
 }
 
+*/
 
+
+
+// Scroll Services Carousel
+function scrollServices(direction) {
+    const servicesGrid = document.getElementById('servicesGrid');
+    const scrollAmount = 370; // Width of one item + gap
+    
+    if (direction === 'left') {
+        servicesGrid.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    } else if (direction === 'right') {
+        servicesGrid.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Update Services Arrows Visibility
+function updateServicesArrowsVisibility() {
+    const servicesGrid = document.getElementById('servicesGrid');
+    const leftArrow = document.querySelector('.services-carousel-container .left-arrow');
+    const rightArrow = document.querySelector('.services-carousel-container .right-arrow');
+    
+    if (servicesGrid && leftArrow && rightArrow) {
+        // Hide left arrow at start
+        if (servicesGrid.scrollLeft <= 0) {
+            leftArrow.style.opacity = '0.3';
+            leftArrow.style.pointerEvents = 'none';
+        } else {
+            leftArrow.style.opacity = '1';
+            leftArrow.style.pointerEvents = 'auto';
+        }
+        
+        // Hide right arrow at end
+        if (servicesGrid.scrollLeft + servicesGrid.clientWidth >= servicesGrid.scrollWidth - 10) {
+            rightArrow.style.opacity = '0.3';
+            rightArrow.style.pointerEvents = 'none';
+        } else {
+            rightArrow.style.opacity = '1';
+            rightArrow.style.pointerEvents = 'auto';
+        }
+    }
+}
+
+// Listen for services scroll events
+const servicesGrid = document.getElementById('servicesGrid');
+if (servicesGrid) {
+    servicesGrid.addEventListener('scroll', updateServicesArrowsVisibility);
+    // Initial check
+    updateServicesArrowsVisibility();
+}
