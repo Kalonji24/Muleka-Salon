@@ -22,13 +22,13 @@ A modern, responsive website for Muleka Salon - Bellville's premier hair studio 
 ## Services Offered
 
 - Hair Styling (from R250)
-- Color Treatments (from R450)
-- Highlights (from R550)
+- Color Treatments (from R200)
+- Highlights (from R250)
 - Hair Treatments (from R350)
-- Braiding (from R400)
-- Extensions (from R800)
-- Keratin Treatment (from R650)
-- Bridal Hair (from R1200)
+- Braiding (from R300)
+- Extensions (from R500)
+- -Nail Services (from R200)
+- Bridal Hair (from R800)
 
 ## Key Sections
 
@@ -122,4 +122,3 @@ Created for Muleka Salon - Bellville's finest hair studio
 
 ---
 
-**Note**: Remember to replace placeholder images with actual salon photos for the best visual impact!
